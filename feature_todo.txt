@@ -1,0 +1,13 @@
+TODO:
+
+
+Model
+Change the shape of a grocery to include its completion status
+Callback function (take state and modify CSS?)
+
+View
+CSS to handle the crossout style
+new classname for list elements for the CSS style to handle
+
+Controller
+Event Handler

@@ -3,14 +3,14 @@ var SRC_DIR = path.join(__dirname, '/client/src');
 var DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
-  entry: `${SRC_DIR}/index.jsx`,
+  entry: `${SRC_DIR}/index.jsx`,  // Path to entry point
   output: {
-    filename: 'bundle.js',
-    path: DIST_DIR
+    filename: 'bundle.js',        // Name of output bundle file
+    path: DIST_DIR                // Directory to place output file
   },
-  module : {
-    loaders : [
-      {
+  module : {                      // modular rules to follow when transpiling files
+    loaders : [                   // list of different file formats and rules for each set
+      {                           // describes a file type and which modules to use to interpret them
         test : /\.jsx?/,
         include : SRC_DIR,
         loader : 'babel-loader',
