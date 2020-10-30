@@ -1,11 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.send('The internet is working again')
-});
-
-app.listen(port, () => {
-  console.log(`Application is listening on http://localhost:${port}`)
-});
+// Decide on the directory
+const publicDirectory = path.join(__dirname, '../client/dist');
+// Implement middlware with use method
+app.use(express.static(publicDirectory));
+// Run express static
+app.listen(PORT);
