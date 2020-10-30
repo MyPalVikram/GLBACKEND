@@ -3,6 +3,7 @@ import Header from './Header.jsx';
 import Form from './Form.jsx';
 import List from './List.jsx';
 import dummyData from './dummydata.js';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,10 +14,19 @@ class App extends React.Component {
 
     this.addGrocery = this.addGrocery.bind(this);
     this.togglePurchase = this.togglePurchase.bind(this);
+    this.updateGroceries = this.updateGroceries.bind(this);
   }
 
   componentDidMount() {
-    this.setState({groceries: dummyData})
+    axios.get('http://localhost:3000/groceries')
+    .then(this.updateGroceries)
+    .catch((error) => {console.log(error)})
+  }
+
+  updateGroceries(response) {
+    this.setState({
+      groceries: response.data
+    })
   }
 
   addGrocery(grocery) {

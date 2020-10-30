@@ -1,4 +1,5 @@
-export default [{
+module.exports = [
+  {
   name: "Yellow Onions",
   quantity: 6,
   purchased: false
@@ -18,4 +19,3 @@ export default [{
   quantity: 2,
   purchased: false
 }]
-
