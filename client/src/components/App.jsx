@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/groceries')
+    axios.get('/groceries')
     .then(this.updateGroceries)
     .catch((error) => {console.log(error)})
   }

@@ -1,4 +1,4 @@
-const connection = require('../db/connection.js');
+const db = require('../db/connection.js');
 
 const getGroceries = (query, callback) => {
   db.connection.query(query, (err, data) => {

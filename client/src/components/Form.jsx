@@ -25,13 +25,13 @@ class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.submitGrocery}>
-        <label> Item
-          <input name="name" value={this.state.name} onChange={this.handleInput}/>
+        <label>
+          <input placeholder='Item Name' name="name" value={this.state.name} onChange={this.handleInput}/>
         </label>
-        <label> Qunatity
-          <input name="quantity" value={this.state.quantity} onChange={this.handleInput}/>
+        <label>
+          <input placeholder='Quantity' name="quantity" value={this.state.quantity} onChange={this.handleInput}/>
         </label>
-        <button>Add Grocery</button>
+        <button>Add</button>
       </form>
     )
   }
