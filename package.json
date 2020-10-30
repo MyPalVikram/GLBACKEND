@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js",
+    "start": "nodemon server/server.js",
     "open": "live-server --open=mockup.html",
     "babel": "babel . --out-dir compiled --presets=react --ignore=node_modules,compiled --source-maps inline --watch",
     "demo": "echo Hello World"
