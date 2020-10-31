@@ -1,6 +1,6 @@
 const db = require('../db/connection.js');
 
-const getGroceries = (query, callback) => {
+module.exports.getGroceries = (query, callback) => {
   db.connection.query(query, (err, data) => {
     if (err) {
       callback(err);
@@ -9,5 +9,3 @@ const getGroceries = (query, callback) => {
     }
   });
 }
-
-module.exports.getGroceries = getGroceries;
